@@ -1,0 +1,10 @@
+@use './reset';
+@use './variables' as var;
+@use './media-queries' as screen;
+
+h1 {
+  color: var.$green-text;
+  @include screen.lg {
+    color: orange;
+  }
+}

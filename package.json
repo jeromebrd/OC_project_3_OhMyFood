@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.64.1"
+  },
+  "name": "projet-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass -w assets/styles/scss/style.scss:assets/styles/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
