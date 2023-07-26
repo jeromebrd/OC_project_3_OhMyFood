@@ -1,0 +1,34 @@
+@use './variables' as var;
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  background: var.$white-hint;
+  min-height: 22.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.aside {
+  background: var.$white;
+  height: 44rem;
+}
+.main {
+  background: var.$white-hint;
+  padding-bottom: 2rem;
+}
+
+.footer {
+  background: var.$grey-dark;
+  color: var.$white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 2.2rem 2.5rem;
+}

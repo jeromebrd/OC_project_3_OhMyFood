@@ -1,3 +1,4 @@
+@use './variables' as var;
 body {
   font-size: 1.6rem;
 }
@@ -6,9 +7,12 @@ html {
   font-family: var.$font-text;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1 {
+  color: var.$color-title;
   font-family: var.$font-title;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.8rem;
 }

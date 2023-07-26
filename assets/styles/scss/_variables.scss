@@ -1,6 +1,21 @@
-$font-title: Shrikhand;
-$font-text: Roboto;
+$font-title: 'Shrikhand', cursive;
+$font-text: 'Roboto', sans-serif;
 $primary: #9356dc;
 $secondary: #ff79da;
 $green: #99e2d0;
 $green-text: #008766;
+$grey-dark: #353535;
+$grey-hint: #7e7e7e;
+$grey-light: #eaeaea;
+$white: #fff;
+$white-hint: #f6f6f6;
+$color-title: #101010;
+$gradient-pinktopurple: linear-gradient(
+  180deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(216, 108, 219, 1) 0%,
+  rgba(202, 104, 219, 1) 27%,
+  rgba(185, 98, 219, 1) 53%,
+  rgba(161, 90, 220, 1) 80%,
+  rgba(147, 86, 220, 1) 100%
+);
