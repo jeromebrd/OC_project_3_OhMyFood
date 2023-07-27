@@ -4,14 +4,25 @@
 @use './media-queries' as screen;
 @use './layout';
 @use './utils';
+@use './classes';
 
 .header {
+  &__wrapper {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    &--with-arrow {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
   &__logo {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 14px 0;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     img {
       width: 19.7rem;
     }
@@ -26,6 +37,15 @@
     gap: 1.7rem;
     i {
       color: var.$grey-dark;
+    }
+  }
+  &__bg-img {
+    z-index: -50;
+    width: 100%;
+    height: 27.5rem;
+    &--palette {
+      background: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg)
+        center / cover;
     }
   }
 }
@@ -53,6 +73,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    @include screen.lg {
+      padding: 5rem 2rem;
+      height: auto;
+      gap: 2.5rem;
+    }
   }
   &__list {
     display: flex;
@@ -60,6 +85,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding-left: 1rem;
+    @include screen.lg {
+      flex-direction: row;
+      align-items: center;
+      gap: 3.2rem;
+    }
     li {
       position: relative;
       background: var.$white-hint;
@@ -69,6 +99,9 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      @include screen.lg {
+        flex: 1;
+      }
       i {
         color: var.$grey-hint;
         padding: 0 2.7rem 0 3.3rem;
@@ -102,6 +135,13 @@
     align-items: center;
     gap: 1.8rem;
     margin-top: 2.5rem;
+    @include screen.lg {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 100%;
+      row-gap: 5rem;
+      column-gap: 10rem;
+    }
 
     .card-restaurant {
       position: relative;
@@ -109,6 +149,9 @@
       background: var.$white;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
       border-radius: 1.5rem;
+      @include screen.lg {
+        width: 40%;
+      }
       &__wrap-img {
         border-radius: 1.5rem 1.5rem 0 0;
         height: 23rem;
@@ -152,6 +195,14 @@
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    @include screen.md {
+      // width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2rem;
+    }
+
     li {
       display: flex;
       justify-content: flex-start;
@@ -166,6 +217,36 @@
       }
       a {
         color: var.$white;
+      }
+    }
+  }
+}
+
+.menu {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem 1.3rem;
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  &__form {
+    &-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      gap: 2rem;
+      &--btn {
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
+        button {
+          width: 18.6rem;
+        }
       }
     }
   }

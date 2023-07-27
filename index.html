@@ -18,8 +18,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <img src="./assets/images/logo/ohmyfood.png" alt="logo" />
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img src="./assets/images/logo/ohmyfood.png" alt="logo" />
+        </div>
       </div>
       <div class="header__location">
         <i class="fa-solid fa-location-dot"></i>
@@ -37,8 +39,8 @@
       </div>
     </section>
     <!-- functioning -->
-    <aside class="aside container">
-      <div class="aside__wrapper">
+    <aside class="aside">
+      <div class="aside__wrapper container">
         <h2>Fonctionnement</h2>
         <ul class="aside__list">
           <li>
@@ -61,11 +63,11 @@
     </aside>
     <!-- restaurants  -->
     <main class="main">
-      <div class="main__wrapper">
+      <div class="main__wrapper container">
         <h2>Restaurants</h2>
         <div class="main__card-container">
           <!-- card 1 -->
-          <div class="card-restaurant">
+          <a href="./restaurants/palette-du-gout.html" class="card-restaurant">
             <div class="card-restaurant__wrap-img">
               <img
                 src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
@@ -80,9 +82,9 @@
               </div>
               <i class="fa-regular fa-heart icon-like"></i>
             </div>
-          </div>
+          </a>
           <!-- card 2 -->
-          <div class="card-restaurant">
+          <a href="./restaurants/note-enchantee.html" class="card-restaurant">
             <div class="card-restaurant__wrap-img">
               <img
                 src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
@@ -97,9 +99,9 @@
               </div>
               <i class="fa-regular fa-heart icon-like"></i>
             </div>
-          </div>
+          </a>
           <!-- card 3 -->
-          <div class="card-restaurant">
+          <a href="./restaurants/a-la-francaise.html" class="card-restaurant">
             <div class="card-restaurant__wrap-img">
               <img
                 src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -113,13 +115,13 @@
               </div>
               <i class="fa-regular fa-heart icon-like"></i>
             </div>
-          </div>
+          </a>
           <!-- card 4 -->
-          <div class="card-restaurant">
+          <a href="./restaurants/delice-des-sens.html" class="card-restaurant">
             <div class="card-restaurant__wrap-img">
               <img
                 src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                alt="La palette du goût"
+                alt="Le délice des sens"
               />
             </div>
             <div class="card-restaurant__desc">
@@ -129,7 +131,7 @@
               </div>
               <i class="fa-regular fa-heart icon-like"></i>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </main>
@@ -141,17 +143,17 @@
           <i class="fa-solid fa-utensils"></i>
           <a href="#">Proposer un restaurant</a>
         </li>
-        <li>
+        <li class="pr-30">
           <i class="fa-solid fa-handshake icon-rotated"></i>
           <a href="#">Devenir partenaire</a>
         </li>
         <li>
           <a href="#">Mentions légales</a>
         </li>
-        <li>
+        <li class="pr-30">
           <a href="#">Contact</a>
         </li>
       </ul>
-    </li
+    </footer>
   </body>
 </html>
