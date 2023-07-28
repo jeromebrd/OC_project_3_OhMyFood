@@ -5,6 +5,7 @@
 @use './layout';
 @use './utils';
 @use './classes';
+@use './card-resto-animated';
 
 .header {
   &__wrapper {
@@ -69,12 +70,12 @@
 }
 .aside {
   &__wrapper {
-    padding: 4.8rem 2rem;
+    // padding: 4.8rem 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     @include screen.lg {
-      padding: 5rem 2rem;
+      // padding: 5rem 2rem;
       height: auto;
       gap: 2.5rem;
     }
@@ -124,7 +125,7 @@
 
 .main {
   &__wrapper {
-    padding: 4.8rem 2rem;
+    // padding: 4.8rem 2rem;
     display: flex;
     flex-flow: column wrap;
   }
@@ -140,7 +141,7 @@
       justify-content: space-between;
       width: 100%;
       row-gap: 5rem;
-      column-gap: 10rem;
+      // column-gap: 10rem;
     }
 
     .card-restaurant {
