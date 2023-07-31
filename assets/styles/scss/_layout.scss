@@ -44,7 +44,11 @@
 
 .menu {
   background: var.$white-hint;
-  width: 100%;
+  width: 100vw;
   border-radius: 40px 40px 0 0;
   margin-top: -50px;
+  @include screen.lg {
+    width: 80vw;
+    margin: -50px auto 0;
+  }
 }

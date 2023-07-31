@@ -40,10 +40,14 @@
       color: var.$grey-dark;
     }
   }
+  // cover img of restaurants
   &__bg-img {
     z-index: -50;
     width: 100%;
     height: 27.5rem;
+    @include screen.lg {
+      height: 65rem;
+    }
     &--palette {
       background: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg)
         center / cover;
@@ -228,12 +232,23 @@
     display: flex;
     flex-direction: column;
     padding: 3.2rem 1.3rem;
+    @include screen.lg {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
   }
   &__heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
+    @include screen.lg {
+      justify-content: center;
+      h1 {
+        margin-right: 2.4rem;
+      }
+    }
   }
   &__form {
     &-group {
@@ -241,10 +256,14 @@
       flex-direction: column;
       margin-bottom: 4rem;
       gap: 2rem;
+
       &--btn {
         display: flex;
         align-items: center;
         padding: 4rem 0;
+        @include screen.lg {
+          padding: 0;
+        }
         button {
           width: 18.6rem;
         }
