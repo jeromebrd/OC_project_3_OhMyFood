@@ -144,6 +144,20 @@ button {
   }
 }
 
+.container-menu {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem 1.3rem;
+}
+@media screen and (min-width: 1224px) {
+  .container-menu {
+    width: 80%;
+    padding-bottom: 0;
+  }
+}
+
 .btn-gradient {
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -198,84 +212,82 @@ button {
   position: relative;
   justify-content: space-between;
   background: #fff;
-  padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
 }
-.card-menu label {
+.card-menu input[type=checkbox]:checked + label .anim-bg-green {
+  width: 59px;
+  opacity: 1;
+}
+.card-menu input[type=checkbox]:checked + label .anim-bg-green .icon-wrap i {
+  opacity: 1;
+}
+.card-menu__input {
+  display: none;
+}
+.card-menu__label {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  justify-content: space-between;
   width: 100%;
-  row-gap: 0.5rem;
-  transition: width 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
 }
-.card-menu__desc {
+.card-menu__label .text {
+  padding: 1.5rem 0 1.5rem 1.5rem;
   display: flex;
-  max-width: 100%;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  width: 70%;
+  flex: 1;
+}
+.card-menu__label .text__title {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.card-menu__label .text__desc {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.card-menu__label .text__title, .card-menu__label .text__desc {
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.5rem;
-  font-weight: 300;
-  transition: width 0.5s ease;
 }
-.card-menu__title {
-  font-weight: 500;
-  font-size: 1.8rem;
-  text-overflow: ellipsis;
+.card-menu__label .priceAndAnim {
+  align-self: flex-end;
+  height: 100%;
+  max-width: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
 }
-.card-menu__price {
+.card-menu__label .priceAndAnim .price {
+  padding-bottom: 1.5rem;
   color: #353535;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-right: 1rem;
+  padding-right: 1.5rem;
+  padding-left: 0.5rem;
 }
-.card-menu input[type=checkbox] {
-  display: none;
-}
-.card-menu input[type=checkbox]:checked + label .card-menu__desc {
-  width: calc(100% - 5rem);
-  transition: width 0.5s ease-in;
-}
-.card-menu input[type=checkbox] + label .green-check {
-  z-index: 10;
-  position: absolute;
+.card-menu__label .priceAndAnim .anim-bg-green {
   width: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 15px 15px 0;
-  transition: width 0.3s ease;
-}
-.card-menu input[type=checkbox] + label .green-check .fa-circle-check {
-  color: white;
-  display: none;
-}
-.card-menu input[type=checkbox]:checked + label .green-check {
-  background: #99e2d0;
-  width: 5.9rem;
   height: 100%;
-  transition: width 0.3s ease;
-}
-.card-menu input[type=checkbox]:checked + label .green-check .fa-circle-check {
-  display: block;
-  opacity: 1;
-}
-.card-menu input[type=checkbox]:not(:checked) + label .green-check {
-  transition: width 0.3s ease;
-  width: 0;
-  background: #99e2d0;
-}
-.card-menu input[type=checkbox]:not(:checked) + label .green-check .fa-circle-check {
   opacity: 0;
+  transition: width 0.4s ease-out, opacity 0.3s ease-out;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+}
+.card-menu__label .priceAndAnim .icon-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.card-menu__label .priceAndAnim .icon-wrap i {
+  opacity: 0;
+  color: white;
+  transition: opacity 0.5s ease;
 }
 
 .header__wrapper {
@@ -321,7 +333,16 @@ button {
   }
 }
 .header__bg-img--palette {
-  background: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center/cover;
+  background: url(../../images/restaurants/img-la-palette-du-gout.jpg) center/cover;
+}
+.header__bg-img--francaise {
+  background: url(../../images/restaurants/img-a-la-francaise.jpg) center/cover;
+}
+.header__bg-img--delice {
+  background: url(../../images/restaurants/img-les-delices-du-sens.jpg) center/cover;
+}
+.header__bg-img--enchantee {
+  background: url(../../images/restaurants/img-la-note-enchantee.jpg) center/cover;
 }
 
 .hero__wrapper {
@@ -427,7 +448,7 @@ button {
 }
 @media screen and (min-width: 1224px) {
   .main__card-container .card-restaurant {
-    width: 40%;
+    width: 48%;
   }
 }
 .main__card-container .card-restaurant__wrap-img {
@@ -492,18 +513,50 @@ button {
   color: #fff;
 }
 
-.menu__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 3.2rem 1.3rem;
-}
-@media screen and (min-width: 1224px) {
-  .menu__wrapper {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 0;
+/* .menu {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem 1.3rem;
+    @include screen.lg {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
   }
-}
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    @include screen.lg {
+      justify-content: center;
+      h1 {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+  &__form {
+    &-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      gap: 2rem;
+
+      &--btn {
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
+        @include screen.lg {
+          padding: 0;
+        }
+        button {
+          width: 18.6rem;
+        }
+      }
+    }
+  }
+} */
 .menu__heading {
   display: flex;
   justify-content: space-between;
@@ -518,23 +571,23 @@ button {
     margin-right: 2.4rem;
   }
 }
-.menu__form-group {
+.menu__form .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
   gap: 2rem;
 }
-.menu__form-group--btn {
+.menu__form .form-group--btn {
   display: flex;
   align-items: center;
   padding: 4rem 0;
 }
 @media screen and (min-width: 1224px) {
-  .menu__form-group--btn {
+  .menu__form .form-group--btn {
     padding: 0;
   }
 }
-.menu__form-group--btn button {
+.menu__form .form-group--btn button {
   width: 18.6rem;
 }
 
