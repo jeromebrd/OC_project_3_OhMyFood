@@ -206,15 +206,6 @@ button {
   font-size: 3rem;
 }
 
-.card-menu {
-  display: flex;
-  width: 100%;
-  position: relative;
-  justify-content: space-between;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
-}
 .card-menu input[type=checkbox]:checked + label .anim-bg-green {
   width: 59px;
   opacity: 1;
@@ -230,6 +221,13 @@ button {
   justify-content: space-between;
   width: 100%;
   cursor: pointer;
+  /*
+    working principle of animation :
+    price and checkmark are both in the div to right.
+    Initially the checkmark div (anim-bg-green) => width = 0.
+    When input type checkbox is checking, the width of checkmark div is becoming to 59px, with transition.
+    And opacity of icon (<i>) 0 => 1 with transition.
+  */
 }
 .card-menu__label .text {
   padding: 1.5rem 0 1.5rem 1.5rem;
@@ -513,55 +511,12 @@ button {
   color: #fff;
 }
 
-/* .menu {
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 3.2rem 1.3rem;
-    @include screen.lg {
-      width: 80%;
-      margin: 0 auto;
-      padding-bottom: 0;
-    }
-  }
-  &__heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4rem;
-    @include screen.lg {
-      justify-content: center;
-      h1 {
-        margin-right: 2.4rem;
-      }
-    }
-  }
-  &__form {
-    &-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 4rem;
-      gap: 2rem;
-
-      &--btn {
-        display: flex;
-        align-items: center;
-        padding: 4rem 0;
-        @include screen.lg {
-          padding: 0;
-        }
-        button {
-          width: 18.6rem;
-        }
-      }
-    }
-  }
-} */
 .menu__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  padding: 0 2rem 0 1rem;
 }
 @media screen and (min-width: 1224px) {
   .menu__heading {
@@ -577,6 +532,30 @@ button {
   margin-bottom: 4rem;
   gap: 2rem;
 }
+.menu__form .form-group .card-menu {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+}
+.menu__form .form-group .animation-no-delay {
+  animation: slide-in 3.5s forwards 0.2s;
+  opacity: 0;
+  transform: translateY(250px);
+}
+.menu__form .form-group .animation-delay-1s {
+  animation: slide-in 3.5s forwards 1s;
+  opacity: 0;
+  transform: translateY(200px);
+}
+.menu__form .form-group .animation-delay-2s {
+  animation: slide-in 3.5s forwards 2s;
+  opacity: 0;
+  transform: translateY(150px);
+}
 .menu__form .form-group--btn {
   display: flex;
   align-items: center;
@@ -589,6 +568,13 @@ button {
 }
 .menu__form .form-group--btn button {
   width: 18.6rem;
+}
+
+@keyframes slide-in {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

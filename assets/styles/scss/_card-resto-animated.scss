@@ -1,14 +1,6 @@
 @use 'variables' as var;
+// animation card when an user is checking menu
 .card-menu {
-  display: flex;
-  width: 100%;
-  position: relative;
-  justify-content: space-between;
-  background: var.$white;
-  border-radius: 15px;
-  box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px
-    rgba(0, 0, 0, 0.1);
-  // When an user is checking
   input[type='checkbox']:checked + label .anim-bg-green {
     width: 59px;
     opacity: 1;
@@ -26,6 +18,7 @@
     justify-content: space-between;
     width: 100%;
     cursor: pointer;
+
     .text {
       padding: 1.5rem 0 1.5rem 1.5rem;
       display: flex;
@@ -41,6 +34,7 @@
         font-size: 1.5rem;
         font-weight: 300;
       }
+      // have to give width with parent element, to have a text-overflow ellipsis.
       &__title,
       &__desc {
         width: 100%;
@@ -49,6 +43,14 @@
         text-overflow: ellipsis;
       }
     }
+
+    /*
+      working principle of animation :
+      price and checkmark are both in the div to right.
+      Initially the checkmark div (anim-bg-green) => width = 0.
+      When input type checkbox is checking, the width of checkmark div is becoming to 59px, with transition.
+      And opacity of icon (<i>) 0 => 1 with transition.
+    */
     .priceAndAnim {
       align-self: flex-end;
       height: 100%;
