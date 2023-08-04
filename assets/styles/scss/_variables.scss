@@ -19,11 +19,11 @@ $gradient-pinktopurple: linear-gradient(
   rgba(161, 90, 220, 1) 80%,
   rgba(147, 86, 220, 1) 100%
 );
-$bg-img-palette: url(../../images/restaurants/img-la-palette-du-gout.jpg) center /
+$bg-img-palette: url(../../images/restaurants/img-la-palette-du-gout.webp)
+  center / cover;
+$bg-img-francaise: url(../../images/restaurants/img-a-la-francaise.webp) center /
   cover;
-$bg-img-francaise: url(../../images/restaurants/img-a-la-francaise.jpg) center /
-  cover;
-$bg-img-delice: url(../../images/restaurants/img-les-delices-du-sens.jpg) center /
-  cover;
-$bg-img-enchantee: url(../../images/restaurants/img-la-note-enchantee.jpg)
+$bg-img-delice: url(../../images/restaurants/img-les-delices-du-sens.webp)
+  center / cover;
+$bg-img-enchantee: url(../../images/restaurants/img-la-note-enchantee.webp)
   center / cover;

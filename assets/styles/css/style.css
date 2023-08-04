@@ -236,6 +236,7 @@ button {
   justify-content: space-between;
   width: 70%;
   flex: 1;
+  row-gap: 5px;
 }
 .card-menu__label .text__title {
   font-weight: 500;
@@ -307,6 +308,7 @@ button {
 }
 .header__logo img {
   width: 19.7rem;
+  height: 100%;
 }
 .header__location {
   display: flex;
@@ -331,16 +333,16 @@ button {
   }
 }
 .header__bg-img--palette {
-  background: url(../../images/restaurants/img-la-palette-du-gout.jpg) center/cover;
+  background: url(../../images/restaurants/img-la-palette-du-gout.webp) center/cover;
 }
 .header__bg-img--francaise {
-  background: url(../../images/restaurants/img-a-la-francaise.jpg) center/cover;
+  background: url(../../images/restaurants/img-a-la-francaise.webp) center/cover;
 }
 .header__bg-img--delice {
-  background: url(../../images/restaurants/img-les-delices-du-sens.jpg) center/cover;
+  background: url(../../images/restaurants/img-les-delices-du-sens.webp) center/cover;
 }
 .header__bg-img--enchantee {
-  background: url(../../images/restaurants/img-la-note-enchantee.jpg) center/cover;
+  background: url(../../images/restaurants/img-la-note-enchantee.webp) center/cover;
 }
 
 .hero__wrapper {
@@ -542,17 +544,17 @@ button {
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
 }
 .menu__form .form-group .animation-no-delay {
-  animation: slide-in 3.5s forwards 0.2s;
+  animation: slide-in 3.5s 0.2s ease-in-out forwards;
   opacity: 0;
   transform: translateY(250px);
 }
 .menu__form .form-group .animation-delay-1s {
-  animation: slide-in 3.5s forwards 1s;
+  animation: slide-in 3.5s 1s ease-in-out forwards;
   opacity: 0;
   transform: translateY(200px);
 }
 .menu__form .form-group .animation-delay-2s {
-  animation: slide-in 3.5s forwards 2s;
+  animation: slide-in 3.5s 2s ease-in-out forwards;
   opacity: 0;
   transform: translateY(150px);
 }

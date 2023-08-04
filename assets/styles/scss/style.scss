@@ -26,6 +26,7 @@
     padding: 14px 0;
     img {
       width: 19.7rem;
+      height: 100%;
     }
   }
   &__location {
@@ -268,17 +269,17 @@
       }
       .animation {
         &-no-delay {
-          animation: slide-in 3.5s forwards 0.2s;
+          animation: slide-in 3.5s 0.2s ease-in-out forwards;
           opacity: 0;
           transform: translateY(250px);
         }
         &-delay-1s {
-          animation: slide-in 3.5s forwards 1s;
+          animation: slide-in 3.5s 1s ease-in-out forwards;
           opacity: 0;
           transform: translateY(200px);
         }
         &-delay-2s {
-          animation: slide-in 3.5s forwards 2s;
+          animation: slide-in 3.5s 2s ease-in-out forwards;
           opacity: 0;
           transform: translateY(150px);
         }
