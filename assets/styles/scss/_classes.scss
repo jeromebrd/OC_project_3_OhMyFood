@@ -55,15 +55,22 @@
   height: 3px;
   background: var.$green;
 }
-.icon-like {
-  font-size: 2.2rem;
-  // background: white;
+.icon-like svg {
   cursor: pointer;
-  &:hover {
-    font-weight: 800;
-    color: red;
+  fill: url(#gradient-like);
+  fill-opacity: 0;
+  stroke: black;
+  stroke-width: 6;
+  stroke-opacity: 1;
+  transition: fill-opacity 0.2s ease, stroke 0.2s ease;
+
+  &:hover,
+  &:focus {
+    fill-opacity: 1;
+    stroke: url(#gradient-like);
   }
 }
+
 .arrow-icon {
   font-size: 3rem;
 }

@@ -193,13 +193,18 @@ button {
   background: #99e2d0;
 }
 
-.icon-like {
-  font-size: 2.2rem;
+.icon-like svg {
   cursor: pointer;
+  fill: url(#gradient-like);
+  fill-opacity: 0;
+  stroke: black;
+  stroke-width: 6;
+  stroke-opacity: 1;
+  transition: fill-opacity 0.2s ease, stroke 0.2s ease;
 }
-.icon-like:hover {
-  font-weight: 800;
-  color: red;
+.icon-like svg:hover, .icon-like svg:focus {
+  fill-opacity: 1;
+  stroke: url(#gradient-like);
 }
 
 .arrow-icon {
@@ -544,17 +549,17 @@ button {
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
 }
 .menu__form .form-group .animation-no-delay {
-  animation: slide-in 3.5s 0.2s ease-in-out forwards;
+  animation: slide-in 3.5s 0.2s ease-out forwards;
   opacity: 0;
   transform: translateY(250px);
 }
 .menu__form .form-group .animation-delay-1s {
-  animation: slide-in 3.5s 1s ease-in-out forwards;
+  animation: slide-in 3.5s 1s ease-out forwards;
   opacity: 0;
   transform: translateY(200px);
 }
 .menu__form .form-group .animation-delay-2s {
-  animation: slide-in 3.5s 2s ease-in-out forwards;
+  animation: slide-in 3s 2s ease-out forwards;
   opacity: 0;
   transform: translateY(150px);
 }
