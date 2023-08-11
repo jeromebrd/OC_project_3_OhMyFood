@@ -84,12 +84,10 @@
 }
 .aside {
   &__wrapper {
-    // padding: 4.8rem 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     @include screen.lg {
-      // padding: 5rem 2rem;
       height: auto;
       gap: 2.5rem;
     }
@@ -139,7 +137,6 @@
 
 .main {
   &__wrapper {
-    // padding: 4.8rem 2rem;
     display: flex;
     flex-flow: column wrap;
   }
@@ -155,7 +152,6 @@
       justify-content: space-between;
       width: 100%;
       row-gap: 5rem;
-      // column-gap: 10rem;
     }
 
     .card-restaurant {
@@ -166,6 +162,9 @@
       border-radius: 1.5rem;
       @include screen.lg {
         width: 48%;
+      }
+      &__link {
+        display: block;
       }
       &__wrap-img {
         border-radius: 1.5rem 1.5rem 0 0;
@@ -195,11 +194,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &--text {
+        € &--text {
           p {
             font-size: 1.7rem;
           }
         }
+      }
+      .icon-like {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px 25px;
       }
     }
   }
@@ -211,7 +216,6 @@
     flex-direction: column;
     gap: 0.7rem;
     @include screen.md {
-      // width: 100%;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;

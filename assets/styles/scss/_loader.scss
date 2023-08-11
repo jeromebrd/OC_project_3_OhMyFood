@@ -1,4 +1,5 @@
 @use './variables' as var;
+@use './media-queries' as screen;
 .loader {
   width: 100%;
   position: absolute;
@@ -9,24 +10,34 @@
   text-align: center;
   background: #eee;
   z-index: 50;
-  animation: opacity-bg 0.8s 3s ease-out forwards;
+  animation: opacity-bg 0.2s 3s ease-out forwards;
 
   &__wrapper {
     position: absolute;
-    top: 40%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2rem;
+    @include screen.md {
+      top: 25%;
+    }
+    @include screen.lg {
+      top: 35%;
+    }
   }
 
   &__points span {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 100%;
     background-color: var.$primary;
     margin: 35px 5px;
     opacity: 0;
+    @include screen.md {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__points span:nth-child(1) {
