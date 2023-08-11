@@ -6,6 +6,7 @@
 @use './utils';
 @use './classes';
 @use './card-resto-animated';
+@use './loader';
 
 .header {
   &__wrapper {

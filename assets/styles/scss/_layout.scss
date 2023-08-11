@@ -1,6 +1,10 @@
 @use './variables' as var;
 @use './media-queries' as screen;
 
+body {
+  position: relative;
+}
+
 .header {
   width: 100%;
   display: flex;
