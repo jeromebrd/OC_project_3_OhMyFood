@@ -1,11 +1,15 @@
 @use 'variables' as var;
 // animation card when an user is checking menu
 .card-menu {
-  input[type='checkbox']:checked + label .anim-bg-green {
+  input[type='checkbox']:checked + .card-menu__label .anim-bg-green {
     width: 59px;
     opacity: 1;
   }
-  input[type='checkbox']:checked + label .anim-bg-green .icon-wrap i {
+  input[type='checkbox']:checked
+    + .card-menu__label
+    .anim-bg-green
+    .icon-wrap
+    i {
     opacity: 1;
   }
 
@@ -15,9 +19,16 @@
   // Label : div with text(title/desc menu) + div with price and animation
   &__label {
     display: flex;
+    position: relative;
     justify-content: space-between;
     width: 100%;
-    cursor: pointer;
+    label {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     .text {
       padding: 1.5rem 0 1.5rem 1.5rem;
