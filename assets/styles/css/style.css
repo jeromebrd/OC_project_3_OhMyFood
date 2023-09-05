@@ -599,7 +599,7 @@ body {
   font-size: 1.3rem;
 }
 .footer__wrapper li .icon-rotated {
-  rotate: -45deg;
+  transform: rotate(-45deg);
   font-size: 1.1rem;
 }
 .footer__wrapper li a {
